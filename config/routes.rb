@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'author/show'
+
+  get 'author/new'
+
+  get 'author/edit'
+
   get 'post/show'
 
   get 'post/new'
