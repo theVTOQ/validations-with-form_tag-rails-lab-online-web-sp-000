@@ -5,4 +5,3 @@ Rails.application.routes.draw do
   resources :posts, only: [:show, :new, :create, :edit]
   patch '/posts/:id', to: 'posts#update'
 end
-1
