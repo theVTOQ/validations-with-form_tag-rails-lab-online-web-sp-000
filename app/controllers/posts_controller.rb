@@ -9,8 +9,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = Post.new(post_params)
     if @post.valid?
+      @post.new
       redirect_to post_path(@post)
     else
       render :new
