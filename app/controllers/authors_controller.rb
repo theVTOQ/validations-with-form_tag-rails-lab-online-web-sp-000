@@ -21,7 +21,12 @@ class AuthorsController < ApplicationController
   end
 
   def update
-
+    @author.update(author_params)
+    if @author.is_valid?
+      redirect_to author_path(@author)
+    else
+      render :new
+    end
   end
 
   private
