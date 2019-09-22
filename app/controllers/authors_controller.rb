@@ -1,4 +1,6 @@
 class AuthorsController < ApplicationController
+  before_action :set_post!, only: [:show, :edit, :update]
+
   def show
     @author = Author.find(params[:id])
   end
@@ -18,6 +20,11 @@ class AuthorsController < ApplicationController
 
   def edit
     @author = Author.find(params[:id])
+  end
+
+  def update
+    @author = Author.find(params[:id])
+
   end
 
   private
