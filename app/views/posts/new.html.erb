@@ -1,5 +1,5 @@
-<h2>Editing "<%= @post.title %>"</h2>
-<%= form_tag post_path(@post), method: "patch" do %>
+<h2>Create Post</h2>
+<%= form_tag post_path(@post), method: "post" do %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <ul>
@@ -25,7 +25,7 @@
     </p>
   </div>
 
-  <div class="field <%= 'field_with_errors' if @post.errors[:content].any? %>">
+  <div class="field">
     <%= label_tag "content", "Content" %>
     <br>
     <%= text_area_tag "content", @post.content %>
